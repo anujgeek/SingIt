@@ -1,0 +1,230 @@
+*
+{
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body
+{
+    -webkit-touch-callout: none; /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none; /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none; /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color: #E4E4E4;
+    font-family: 'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    height: 100%;
+    width: 100%;
+}
+
+/* Portrait layout (default) */
+.app
+{
+    background: url(../img/logo.png) no-repeat center top; /* 170px x 200px */
+    position: absolute; /* position in the center of the screen */
+    left: 50%;
+    top: 50%;
+    height: 50px; /* text area height */
+    width: 225px; /* text area width */
+    padding: 180px 0px 0px 0px; /* image height is 200px (bottom 20px are overlapped with text) */
+    margin: -115px 0px 0px -112px; /* offset vertical: half of image height and text area height */
+    /* offset horizontal: half of text area width */
+}
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px)
+{
+    .app
+    {
+        background-position: left center;
+        padding: 75px 0px 75px 170px; /* padding-top + padding-bottom + text area = image height */
+        margin: -90px 0px 0px -198px; /* offset vertical: half of image height */
+        /* offset horizontal: half of image width and text area width */
+    }
+}
+
+.event
+{
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    color: #FFFFFF;
+    font-size: 12px;
+    margin: 0px 30px;
+    padding: 2px 0px;
+}
+
+.event.listening
+{
+    background-color: #333333;
+    display: block;
+}
+
+.event.received
+{
+    background-color: #4B946A;
+    display: none;
+}
+
+@keyframes fade
+{
+    from
+    {
+        opacity: 1.0;
+    }
+
+    50%
+    {
+        opacity: 0.4;
+    }
+
+    to
+    {
+        opacity: 1.0;
+    }
+}
+
+@-webkit-keyframes fade
+{
+    from
+    {
+        opacity: 1.0;
+    }
+
+    50%
+    {
+        opacity: 0.4;
+    }
+
+    to
+    {
+        opacity: 1.0;
+    }
+}
+
+.blink
+{
+    animation: fade 3000ms infinite;
+    -webkit-animation: fade 3000ms infinite;
+}
+
+/*Custom*/
+
+.not-active
+{
+    pointer-events: none;
+    cursor: default;
+}
+
+.vertical-align-middle
+{
+    vertical-align: middle;
+}
+
+.navbar-fixed-top-custom
+{
+}
+
+.navbar-brand-custom
+{
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.ui-header .ui-title
+{
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 0.6em 0em 0.2em 0em;
+}
+
+.ui-bar-theme-custom
+{
+    background-color: #1d1d1d;
+    border-color: #1b1b1b;
+    color: #fff;
+    text-shadow: 0 1px 0 #111;
+    font-weight: 700;
+}
+
+.ui-header-panel-icon
+{
+    margin-top: 0.4em !important;
+    width: 2em;
+    height: 2em;
+}
+
+.ui-panel-top-divider
+{
+    margin-top: 0.9em !important;
+    font-size: large;
+}
+
+
+
+/* ListView */
+.ui-li-static.ui-collapsible
+{
+    padding: 0;
+}
+
+.ui-li-static.ui-collapsible > .ui-collapsible-content > .ui-listview, .ui-li-static.ui-collapsible > .ui-collapsible-heading
+{
+    margin: 0;
+}
+
+.ui-li-static.ui-collapsible > .ui-collapsible-content
+{
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 0;
+    border-bottom-width: 0;
+}
+
+/* collapse vertical borders */
+.ui-li-static.ui-collapsible > .ui-collapsible-content > .ui-listview > li.ui-last-child,
+.ui-li-static.ui-collapsible.ui-collapsible-collapsed > .ui-collapsible-heading > a.ui-btn
+{
+    border-bottom-width: 0;
+}
+
+.ui-li-static.ui-collapsible > .ui-collapsible-content > .ui-listview > li.ui-first-child,
+.ui-li-static.ui-collapsible > .ui-collapsible-content > .ui-listview > li.ui-first-child > a.ui-btn,
+.ui-li-static.ui-collapsible > .ui-collapsible-heading > a.ui-btn
+{
+    border-top-width: 0;
+}
+
+/* Remove right borders */
+.ui-li-static.ui-collapsible > .ui-collapsible-heading > a.ui-btn,
+.ui-li-static.ui-collapsible > .ui-collapsible-content > .ui-listview > .ui-li-static,
+.ui-li-static.ui-collapsible > .ui-collapsible-content > .ui-listview > li > a.ui-btn,
+.ui-li-static.ui-collapsible > .ui-collapsible-content
+{
+    border-right-width: 0;
+}
+
+/* Remove left borders */
+/* Here, we need class ui-listview-outer to identify the outermost listview */
+.ui-listview-outer > .ui-li-static.ui-collapsible .ui-li-static.ui-collapsible.ui-collapsible,
+.ui-listview-outer > .ui-li-static.ui-collapsible > .ui-collapsible-heading > a.ui-btn,
+.ui-li-static.ui-collapsible > .ui-collapsible-content
+{
+    border-left-width: 0;
+}
+
+.normal-custom
+{
+    font-weight: normal !important;
+}
+
+.bold-custom
+{
+    font-weight: bold !important;
+}
+
+h1.lv
+{
+    font-size: 1em !important;
+}
+
+h5.lv
+{
+    font-size: 0.8em !important;
+}

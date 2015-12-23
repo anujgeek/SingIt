@@ -1,0 +1,213 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <title>SingIt! - Social Singing Community</title>
+
+    <!--CSS-->
+    <!--<link href="css/BootstrapThemes/Cosmo/bootstrap.min.css" rel="stylesheet" />-->
+    <!--<link href="css/jQUIThemes/blacktie/jquery-ui.min.css" rel="stylesheet" />-->
+    <link href="css/jQM/jquery.mobile-1.4.5.min.css" rel="stylesheet" />
+    <link href="css/jQM/jquery.mobile.icons-1.4.5.min.css" rel="stylesheet" />
+    <link href="css/jQM/jquery.mobile.structure-1.4.5.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+
+</head>
+<body>
+
+    <div id="page_login" data-role="page" class="type-interior">
+
+        <div data-role="header" role="banner" data-position="fixed" class="ui-header" data-theme="b">
+            <a href="javascript:void(0)" onclick="app.openPanel()" class="ui-btn ui-btn-left ui-btn-corner-all ui-icon-grid ui-btn-icon-notext ui-shadow ui-header-panel-icon" title=" Navigation " data-form="ui-icon" data-role="button" role="button">Navigation</a>
+            <h4 class="ui-title" role="heading">SingIt!</h4>
+        </div>
+
+        <div data-role="content" class="small">
+            <h2>Login</h2>
+            <label for="page_login_username">Username</label>
+            <input type="text" name="page_login_username" id="page_login_username" value="">
+            <label for="page_login_password">Password</label>
+            <input type="password" name="page_login_password" id="page_login_password" value="">
+            <a href="javascript:void(0)" class="ui-btn ui-btn-b ui-corner-all mc-top-margin-1-5" onclick="app.login()">Login</a>
+        </div>
+
+        <div data-role="footer" data-position="fixed" data-theme="b">
+        </div>
+
+    </div>
+
+    <div id="page_mysongs" data-role="page" class="type-interior">
+
+        <div data-role="header" role="banner" data-position="fixed" class="ui-header" data-theme="b">
+            <a href="javascript:void(0)" onclick="app.openPanel()" class="ui-btn ui-btn-left ui-btn-corner-all ui-icon-grid ui-btn-icon-notext ui-shadow ui-header-panel-icon" title=" Navigation " data-form="ui-icon" data-role="button" role="button">Navigation</a>
+            <h4 class="ui-title" role="heading">My Songs</h4>
+        </div>
+
+        <div data-role="content" class="small">
+        </div>
+
+        <div data-role="footer" data-position="fixed" data-theme="b">
+        </div>
+
+    </div>
+
+    <div id="page_allsongs" data-role="page" class="type-interior">
+
+        <div data-role="header" role="banner" data-position="fixed" class="ui-header" data-theme="b">
+            <a href="javascript:void(0)" onclick="app.openPanel()" class="ui-btn ui-btn-left ui-btn-corner-all ui-icon-grid ui-btn-icon-notext ui-shadow ui-header-panel-icon" title=" Navigation " data-form="ui-icon" data-role="button" role="button">Navigation</a>
+            <h4 class="ui-title" role="heading">All Songs</h4>
+        </div>
+
+        <div data-role="content" class="small">
+            <ul id="page_allsongs_listview" data-role="listview" class="ui-listview-outer" data-inset="true" data-filter="true" data-filter-placeholder="Search songs..."></ul>
+        </div>
+
+        <div data-role="footer" data-position="fixed" data-theme="b">
+        </div>
+
+    </div>
+
+    <div id="page_newsong" data-role="page" class="type-interior">
+
+        <div data-role="header" role="banner" data-position="fixed" class="ui-header" data-theme="b">
+            <a href="javascript:void(0)" onclick="app.openPanel()" class="ui-btn ui-btn-left ui-btn-corner-all ui-icon-grid ui-btn-icon-notext ui-shadow ui-header-panel-icon" title=" Navigation " data-form="ui-icon" data-role="button" role="button">Navigation</a>
+            <h4 class="ui-title" role="heading">New Song</h4>
+        </div>
+
+        <div data-role="content" class="small">
+            <label for="page_newsong_songtitle">Song Title</label>
+            <input type="text" name="page_newsong_songtitle" id="page_newsong_songtitle" value="">
+            <div class="ui-field-contain">
+                <label for="page_newsong_selectgenre" class="select">Genre:</label>
+                <select name="page_newsong_selectgenre" id="page_newsong_selectgenre" data-mini="true">
+                    <option value="Blues">Blues</option>
+                    <option value="Classical">Classical</option>
+                    <option value="Country">Country</option>
+                    <option value="Dance">Dance</option>
+                    <option value="Electronic">Electronic</option>
+                    <option value="HipHop">HipHop</option>
+                    <option value="Jazz">Jazz</option>
+                    <option value="Opera">Opera</option>
+                    <option value="Pop">Pop</option>
+                    <option value="Rock">Rock</option>
+                </select>
+            </div>
+            <a href="javascript:void(0)" class="ui-btn ui-btn-b ui-corner-all mc-top-margin-1-5" onclick="app.recordNewSong()">Record</a>
+        </div>
+
+        <div data-role="footer" data-position="fixed" data-theme="b">
+        </div>
+
+    </div>
+
+    <div id="page_recommendedsong" data-role="page" class="type-interior">
+
+        <div data-role="header" role="banner" data-position="fixed" class="ui-header" data-theme="b">
+            <a href="javascript:void(0)" onclick="app.openPanel()" class="ui-btn ui-btn-left ui-btn-corner-all ui-icon-grid ui-btn-icon-notext ui-shadow ui-header-panel-icon" title=" Navigation " data-form="ui-icon" data-role="button" role="button">Navigation</a>
+            <h4 class="ui-title" role="heading">Recommended Song</h4>
+        </div>
+
+        <div data-role="content" class="small">
+
+        </div>
+
+        <div data-role="footer" data-position="fixed" data-theme="b">
+        </div>
+
+    </div>
+
+    <div data-role="panel" id="leftpanel1" data-position="left" data-display="reveal" data-theme="b">
+
+        <ul data-role="listview">
+            <li data-role="list-divider" class="ui-panel-top-divider">
+                <a href="#" class="not-active">Please login</a>
+            </li>
+        </ul>
+    </div>
+
+    <div data-role="panel" id="leftpanel2" data-position="left" data-display="reveal" data-theme="b">
+
+        <ul data-role="listview">
+            <li data-role="list-divider" class="ui-panel-top-divider">
+                <a href="#" class="not-active">Welcome <b data-bind="text: username"></b></a>
+            </li>
+            <li>
+                <a href="javascript:void(0)" onclick="app.gotoMySongs()">My Songs</a>
+            </li>
+            <li>
+                <a href="javascript:void(0)" onclick="app.gotoAllSongs()">All Songs</a>
+            </li>
+            <li>
+                <div data-role="collapsible" data-iconpos="right" data-inset="false">
+                    <h2>Sing It</h2>
+                    <ul data-role="listview" data-inset="true">
+                        <li>
+                            <a href="javascript:void(0)" onclick="app.gotoNewSong()">New Song</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" onclick="app.gotoRecommendedSong()">Recommended Song</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="javascript:void(0)" onclick="app.logout()">Logout</a>
+            </li>
+        </ul>
+    </div>
+
+    <!--
+    <h1>SingIt!</h1>
+    <div id="deviceready" class="blink">
+        <p class="event listening">Connecting to Device</p>
+        <p class="event received">Device is Ready</p>
+    </div>
+
+    Sample Page
+
+    <div id="one" data-role="page" class="type-interior">
+
+        <div data-role="header" role="banner" data-position="fixed" class="ui-header" data-theme="b">
+            <a href="#leftpanel1" class="ui-btn ui-btn-left ui-btn-corner-all ui-icon-grid ui-btn-icon-notext ui-shadow ui-header-panel-icon" title=" Navigation " data-form="ui-icon" data-role="button" role="button">Navigation</a>
+            <h4 class="ui-title" role="heading">SingIt!</h4>
+        </div>
+
+        <div data-role="content" class="small">
+            <h3>ABC</h3>
+        </div>
+
+        <div data-role="footer" data-position="fixed" data-theme="b">
+            <h4>XYZ</h4>
+        </div>
+
+    </div>
+    -->
+    <!--Scripts-->
+
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript">
+        $(document).bind("mobileinit", function ()
+        {
+            //For supporting cross-domain scripting with jQM
+            $.support.cors = true;
+            $.mobile.allowCrossDomainPages = true;
+        });
+    </script>
+    <!--<script src="js/bootstrap.min.js"></script>-->
+    <!--<script src="js/jquery-ui.min.js"></script>-->
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/knockout-3.3.0.js"></script>
+
+    <script src="cordova.js"></script>
+    <script src="js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+
+</body>
+</html>
