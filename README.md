@@ -18,8 +18,8 @@ SingIt! is a cross-platform mobile app in which a singer can record a performanc
 ## Demo
 Login screen will show a 'Connect with Facebook' button that lets you connect this app with your facebook account. Upon login, you will be taken to Home page which will provide you options to select a recommended travel plan or to choose a custom travel plan.
 <br>
-![1](https://raw.githubusercontent.com/anujgeek/SingIt/master/Demo/1.png "Login")
-![2](https://raw.githubusercontent.com/anujgeek/SingIt/master/Demo/2.png "Menu")
+![1](https://raw.githubusercontent.com/anujgeek/SingIt/master/Demo/1.jpg "Login")
+![2](https://raw.githubusercontent.com/anujgeek/SingIt/master/Demo/2.jpg "Menu")
 <br>
 
 Upon login, you will get the following options in the menu. You can also specify notification settings.
