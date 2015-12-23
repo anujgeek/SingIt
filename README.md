@@ -7,7 +7,7 @@ SingIt! is a cross-platform mobile app in which a singer can record a performanc
 
 ## Credits
 
-Mourya Bodepudi - for helping with the analysis, design and development and report preparation of the app.
+Mourya Bodepudi - for helping with the analysis and report preparation.
 
 ## References
 
